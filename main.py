@@ -1,7 +1,29 @@
 
 
 clients = 'christian,mon mon,'
+def create_client(client_name):
+    global clients
+    
+    clients += client_name
+    _add_coma()
+
+def list_clients():
+    global clients
+    print(clients)
+
+def _add_coma():
+    global clients
+    
+    clients += ','
+
 
 if __name__ == '__main__':
-    clients += 'razemint'
+    list_clients()
+
+    create_client('layne')
+    
+    list_clients()
+    
     print(clients)
+
+
